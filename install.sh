@@ -43,8 +43,7 @@ source "$cwd"/OpenCV-"$cvVersion"-py3/bin/activate
 sudo sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=1024/g' /etc/dphys-swapfile
 sudo /etc/init.d/dphys-swapfile stop
 sudo /etc/init.d/dphys-swapfile start
-pip install numpy dlib
-deactivate
+
 git clone https://github.com/opencv/opencv.git
 cd opencv
 git checkout $cvVersion
