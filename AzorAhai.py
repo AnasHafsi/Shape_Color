@@ -1,4 +1,3 @@
-import imutils
 
 import cv2
 from shapedetect import shapeDet
@@ -21,7 +20,7 @@ while True:
     elif key == 98:
         cv2.imwrite("Test.jpg", img)
         print(img)
-    resized = imutils.resize(img, width=300)
+    resized = cv2.resize(img)
     ratio = img.shape[0] / float(resized.shape[0])
 
     blurred = cv2.GaussianBlur(resized, (5, 5), 0)
